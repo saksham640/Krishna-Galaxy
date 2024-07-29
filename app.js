@@ -39,7 +39,7 @@ app.listen(port, ()=>{
 
 //routes
 app.get("/",(req,res)=>{
-    res.render('homePage.ejs');
+    res.render("homePage.ejs");
 });
 
 
