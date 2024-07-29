@@ -10,7 +10,6 @@ const { hashSync, compareSync } = require("bcrypt");
 const cookieParser = require("cookie-parser");
 const mongoStore = require("connect-mongo");
 
-
 const app = express();
 const port = 8080;
 let loggedIn = {status: 0, username: ''};
@@ -39,7 +38,7 @@ app.listen(port, ()=>{
 
 //routes
 app.get("/",(req,res)=>{
-    res.render("homePage.ejs");
+    res.render("home");
 });
 
 
