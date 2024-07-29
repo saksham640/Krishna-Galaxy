@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Navbar</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .navbar{
+      height: 5rem;
+      color: white;
+      background-color: rgb(51, 51, 51) !important;
+    }
+    .brandname{
+      align-content: center;
+      padding-right: 3%;
+      color: rgb(255, 82, 82);
+      font-size: 2.2rem;
+      line-height: 100%;
+      text-align: center;
+      font-family: score;
+      letter-spacing: 2px;
+      
+    }
+    .logo{
+      margin-right: 0.5%;
+    }
+
+    .nav-link {
+  font-size: 1.2rem;
+  padding-bottom: 13%;
+  color: rgb(255, 255, 255) !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: rgb(255, 255, 255);
+  transition: width 0.3s ease, right 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 60%;
+  right: 0;
+}
+
+.fa-shopping-cart {
+  color: rgb(243, 123, 79) !important;
+  margin-right: 0.4rem;
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  transition: transform 0.2s ease;
+}
+
+.fa-shopping-cart:hover {
+  transform: scale(1.2);
+}
+
+
+    @font-face {
+    font-family: score;
+    src: url(Helvetica-Neue-97-Black-Condensed.ttf);
+}
+
+    @font-face {
+    font-family: cabrion;
+    src: url(Cabrion-Bold.ttf);
+}
+      </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+    <a class="navbar-brand logo" href="#">
+      <img src= "https://i.ibb.co/YXgXmj1/3h48ksu1-fotor-bg-remover-2024073012935.png" width="87" height="70" class="d-inline-block align-top logo" alt="brand">
+    </a>
+    <h4 class="brandname"><b>KRISHNA GALAXY</b></h4>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="#" id="brandsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Brands
+          </a>
+          <div class="dropdown-menu" aria-labelledby="brandsDropdown">
+            <a class="dropdown-item" href="#">Brand 1</a>
+            <a class="dropdown-item" href="#">Brand 2</a>
+            <a class="dropdown-item" href="#">Brand 3</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories
+          </a>
+          <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+            <a class="dropdown-item" href="#">Category 1</a>
+            <a class="dropdown-item" href="#">Category 2</a>
+            <a class="dropdown-item" href="#">Category 3</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="#" id="allProductsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            All Products
+          </a>
+          <div class="dropdown-menu" aria-labelledby="allProductsDropdown">
+            <a class="dropdown-item" href="#">Product 1</a>
+            <a class="dropdown-item" href="#">Product 2</a>
+            <a class="dropdown-item" href="#">Product 3</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="#" id="visitShopDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Visit Shop
+          </a>
+          <div class="dropdown-menu" aria-labelledby="visitShopDropdown">
+            <a class="dropdown-item" href="#">Shop 1</a>
+            <a class="dropdown-item" href="#">Shop 2</a>
+            <a class="dropdown-item" href="#">Shop 3</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <a href="#">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+    </div>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
