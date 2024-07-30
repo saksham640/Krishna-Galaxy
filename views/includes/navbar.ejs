@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" />
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
-    .dropdown:hover .dropdown-menu {
+    @media screen and (min-width: 1024px) {
+      .dropdown:hover .dropdown-menu {
       display: block;
     }
     .navbar{
@@ -58,7 +62,7 @@
 
 .fa-shopping-cart {
   color: rgb(243, 123, 79) !important;
-  margin-right: 0.4rem;
+  margin-right: 0.9rem;
   margin-left: 1rem;
   font-size: 1.6rem;
   transition: transform 0.2s ease;
@@ -67,6 +71,7 @@
 .fa-shopping-cart:hover {
   transform: scale(1.2);
 }
+    }
 
 
     @font-face {
@@ -78,6 +83,101 @@
     font-family: cabrion;
     src: url(Cabrion-Bold.ttf);
 }
+
+
+@media screen and (max-width: 750px) {
+  *{
+    margin: 0% !important;
+    padding: 0% !important;
+  }
+  .brandname{
+      color: rgb(255, 82, 82);
+      font-size:1.65rem;
+      line-height: 100%;
+      text-align: center;
+      letter-spacing: 2px;
+      font-family: sans-serif;
+      font-weight: 650;
+      margin-right: 5.7% !important;
+    }
+
+    .navbar-toggler{
+
+      margin-right: 3% !important;
+
+    }
+
+
+    .brand{
+      padding-top: 2% !important;
+    }
+    .nav-link {
+  display:block !important;
+  font-size: 1.4rem;
+  padding-bottom: 13%;
+  color: rgb(255, 255, 255) !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  display: inline-block;
+  padding-left: 2% !important;
+  padding-bottom: 3.5% !important;
+  background-color: rgb(51, 51, 51) !important;
+  transition: 0.2s ease !important;
+}
+
+.nav-link:active{
+  background-color: rgb(255, 86, 86) !important;
+}
+.nav-link:active::after{
+  background-color: rgb(255, 181, 90) !important;
+}
+.dropdown-item{
+  display: inline !important;
+  max-width: 22%;
+}
+
+#audiox{
+  max-width: 30%;
+}
+
+.btn-primary{
+  background-color: red;
+  height: 4rem;
+  width: 4rem;
+  margin: 0.6rem !important;
+  text-align:center !important;
+}
+.category{
+  max-width: 24% !important;
+}
+.searchbar{
+  max-width: 60%;
+  align-items: center !important;
+  justify-content: center !important;
+  align-content: center !important;
+  margin-right: 4% !important;
+  margin-left: 6% !important; 
+  margin-top: 4% !important;
+  text-align: center !important;
+}
+
+.my-sm-0{
+  margin-top: 6% !important;
+  color: white;
+  background-color: black;
+  border-color: rgb(0, 0, 0);
+  padding: 5px !important;
+}
+.fa-shopping-cart {
+  color: rgb(243, 123, 79) !important;
+  font-size: 1.6rem;
+  margin-left: 2rem !important;
+  margin-right: 0% !important;
+  margin-top: 4% !important;
+
+}
+}
+    
       </style>
 
 </head>
@@ -88,18 +188,20 @@
     </a>
     <h4 class="brandname"><b>KRISHNA GALAXY</b></h4>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <i class="fa-solid fa-list"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link " href="#" id="brandsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Brands
+          <a class="nav-link brand" href="#" id="brandsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Brands
           </a>
           <div class="dropdown-menu" aria-labelledby="brandsDropdown">
-            <a class="dropdown-item" href="#">Brand 1</a>
-            <a class="dropdown-item" href="#">Brand 2</a>
-            <a class="dropdown-item" href="#">Brand 3</a>
+            <img src="/Jia_Lighting-modified.png" class="dropdown-item" href="#"></img>
+            <img src="/Screenshot 2024-07-30 060512.png" class="dropdown-item" id="audiox" href="#"></img>
+            <img src="/logo-1-1-2048x1609.png" class="dropdown-item" href="#"></img>
+            <button class="btn btn-primary">View<br> More</button>
+            
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -107,9 +209,10 @@
             Categories
           </a>
           <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
-            <a class="dropdown-item" href="#">Category 1</a>
-            <a class="dropdown-item" href="#">Category 2</a>
-            <a class="dropdown-item" href="#">Category 3</a>
+            <img src="/WhatsApp Image 2024-07-30 at 06.57.25_c0a1ca83.jpg" class="dropdown-item category" href="#"></img>
+            <img src="/WhatsApp Image 2024-07-30 at 07.04.54_9f845137.jpg" class="dropdown-item category" href="#"></img>
+            <img src="/WhatsApp Image 2024-07-30 at 07.12.15_9e2ad507.jpg" class="dropdown-item category" href="#"></img>
+            <button class="btn btn-primary">View<br> More</button>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -134,11 +237,13 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="searchbar">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search any product/category" aria-label="Search">
+        </span>
         <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
       </form>
       <a href="#">
-        <i class="fas fa-shopping-cart"></i>
       </a>
     </div>
   </nav>

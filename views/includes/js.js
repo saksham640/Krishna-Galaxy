@@ -1,0 +1,1 @@
+const panfga = require("../layouts")
