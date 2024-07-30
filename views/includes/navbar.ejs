@@ -62,7 +62,7 @@
 
 .fa-shopping-cart {
   color: rgb(243, 123, 79) !important;
-  margin-right: 0.9rem;
+  margin-right: 0.rem;
   margin-left: 1rem;
   font-size: 1.6rem;
   transition: transform 0.2s ease;
@@ -71,6 +71,28 @@
 .fa-shopping-cart:hover {
   transform: scale(1.2);
 }
+
+/* Add this CSS to your existing styles */
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
     }
 
 
@@ -175,7 +197,31 @@
   margin-right: 0% !important;
   margin-top: 4% !important;
 
+
 }
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: rgb(255, 255, 255);
+  transition: width 0.28s ease, right 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  right: 0;
+}
+
+.fa-list{
+  color: white;
+  font-size: 1.7rem;
+}
+
 }
     
       </style>
@@ -220,9 +266,9 @@
             All Products
           </a>
           <div class="dropdown-menu" aria-labelledby="allProductsDropdown">
-            <a class="dropdown-item" href="#">Product 1</a>
-            <a class="dropdown-item" href="#">Product 2</a>
-            <a class="dropdown-item" href="#">Product 3</a>
+            <a class="dropdown-item" href="#">something</a>
+            <a class="dropdown-item" href="#">kuch bhi</a>
+            <a class="dropdown-item" href="#">savita bhabi</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -230,9 +276,7 @@
             Visit Shop
           </a>
           <div class="dropdown-menu" aria-labelledby="visitShopDropdown">
-            <a class="dropdown-item" href="#">Shop 1</a>
-            <a class="dropdown-item" href="#">Shop 2</a>
-            <a class="dropdown-item" href="#">Shop 3</a>
+            <a class="dropdown-item" href="#">Krishna Galaxy</a>
           </div>
         </li>
       </ul>
