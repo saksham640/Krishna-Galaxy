@@ -1,7 +1,24 @@
 <head>
-    <title>hello</title>
+    <style>
+        #heading{
+    margin-top: 0.5rem !important;
+    text-align: center;
+    border: 0px solid black;
+    border-radius: .7rem;
+    background-color: #ff5a5a;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 2rem;
+}
+    </style>
 </head>
-<%- include("./includes/navbar.ejs") %>
+<%-include("./includes/navbar.ejs")%>
 <body>
-    <h2>heo</h2>
+    <h1 id="heading">Latest</h1>
+    <%-include("./includes/swiper.ejs")%>
+    <hr>
+    <h2>sup</h2>
+    
 </body>
+
+
