@@ -1,0 +1,24 @@
+@font-face {
+    font-family:score;
+    src: url(/fonts/Helvetica-Neue-97-Black-Condensed.ttf);
+}
+
+    @font-face {
+    font-family: cabrion;
+    src: url(/fonts/Cabrion-Bold.ttf);
+}
+        
+        #heading{
+    margin-top: 0.9rem !important;
+    text-align: center;
+    border: 0px solid black;
+    border-radius: .7rem;
+    color: #000000;
+    font-weight: 500;
+    font-size: 2rem;
+    font-family:score;
+
+}
+body{
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,76 @@
+<%-include("./includes/navbar")%>
+    <br>
+    <head>
+        <style>
+            .form-container {
+        max-width: 60%;
+        margin: auto;
+    }
+    @media (max-width: 600px) {
+    .form-container {
+    max-width: 85%;
+    margin-left: 5% !important;
+    padding-left: 5% !important;
+    }
+    
+    }
+        </style>
+        <script async src="https://imgbb.com/upload.js"></script>
+    </head>
+    <body>
+        <div class="container form-container mt-5">
+            <form novalidate class="row g-3" method="POST" action="/owner/addProduct">
+                <div class="col-md-6">
+                    <label for="inputTitle" class="form-label">Name of product</label>
+                    <input type="text" required class="form-control needs-validation" id="inputTitle" name="name" placeholder="Name of your Listing">
+                </div>
+                <div class="col-12">
+                    <label for="inputDescription" class="form-label">Description</label>
+                    <textarea class="form-control" id="inputDescription" name="description" placeholder="Describe your product" rows="5" cols="10"></textarea>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <label for="inputBrand" class="form-label">Brand</label>
+                    <select id="inputBrand" class="form-select dropend" name="brand">
+                    <%-include("./includes/brands.ejs")%>
+                    </select>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <label for="inputCountry" class="form-label">Catrgory</label>
+                    <select id="inputCountry" class="form-select dropend" name="category">
+                    <%-include("./includes/cats.ejs")%>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputPrice" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="inputPrice" name="price" placeholder="in rupees">
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <label for="inputDescription" class="form-label">Specifications</label>
+                    <textarea class="form-control" id="inputDescription" name="specifications" placeholder="Describe your Place" rows="5" cols="10"></textarea>
+                    <br>
+                    </div>
+                    <br>
+                    <div class="col-12">
+                        <label for="inputDescription" class="form-label">Main Image</label>
+                        <textarea class="form-control" id="inputDescription" name="mainimage" placeholder="Describe your product" rows="5" cols="10"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputDescription" class="form-label">Images</label>
+                        <textarea class="form-control" id="inputDescription" name="" placeholder="Describe your product" rows="5" cols="10"></textarea>
+                    </div>
+                </div>
+                    <button type="submit">Submit!</button>
+                </div>
+            </form>
+            <br>
+            <form action="/">
+                <button>back</button>
+            </form>
+    <br>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    
