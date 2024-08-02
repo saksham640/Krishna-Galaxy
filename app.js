@@ -85,8 +85,8 @@ app.listen(port, ()=>{
 //routes
 app.get("/",async(req,res)=>{
     let allProducts = await product.find();
-    let allCategories = await category.find();
-    let allBrands = await brand.find();
+    let allCategories = await category.find().populate("products");
+    let allBrands = await brand.find().populate("products");
     res.render("home.ejs",{allProducts, allBrands, allCategories});
 });
 

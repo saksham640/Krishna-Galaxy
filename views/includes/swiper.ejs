@@ -1,75 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HASH TECHIE OFFICIAL</title>
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-#swapbox{
-  background-image: url("https://www.shutterstock.com/image-vector/modern-vector-background-black-wavy-260nw-2380711627.jpg");
-  background-size: auto;
-}
-.collection{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.collection .content{
-    height: 28rem; 
-    width: 25rem;  
-    background-color: #ffffff;
-    border: 0px solid rgba(255, 255, 255, 0);
-    border-radius: 1rem;
-    overflow: hidden;
-    /* padding: .2rem; */
-}
-
-.content img{
-    width: 100%;
-    border-bottom-left-radius: .6rem;
-    border-bottom-right-radius: .6rem;
-}
-.text-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.text-content h3{
-    font-size: 1.7rem;
-    font-weight: 500;
-}
-.text-content p{
-    max-width: 22rem;
-    font-size: .8rem;
-    font-weight: 400;
-    text-align: center;
-}
-@media screen and (max-width: 900px){
-  .collection .content{
-    height: 15rem; 
-    width: 15rem;  
-    background-color: #ffffff;
-    border: 0px solid rgba(255, 255, 255, 0);
-    border-radius: 1rem;
-    border-bottom: .4rem solid #0099ff00;
-    border-top: .4rem solid #0099ff00;
-    overflow: hidden;
-    /* padding: .2rem; */
-}
-}
-
-  </style>
+    <link rel="stylesheet" href="/styles/homeCarousel.css">
 </head>
 
 <div id="swapbox">
@@ -104,28 +37,7 @@
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  loop:true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 150,
-    modifier: 2.5,
-    slideShadows: true,
-  },
-  autoplay:{
-
-    delay:2500,
-    disableOnInteraction:false,
-  }
-});
-</script>
+  <script src="/javaScript/homeCarousel.js"></script>
 </body>
 
 </html>
