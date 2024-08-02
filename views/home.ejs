@@ -1,23 +1,45 @@
+
 <head>
     <style>
         #heading{
-    margin-top: 0.5rem !important;
+    margin-top: 0.9rem !important;
     text-align: center;
     border: 0px solid black;
     border-radius: .7rem;
-    background-color: #ff5a5a;
-    color: #ffffff;
+    color: #000000;
     font-weight: 500;
     font-size: 2rem;
+    font-family: score;
+
 }
+    @font-face {
+    font-family: score;
+    src: url(Helvetica-Neue-97-Black-Condensed.ttf);
+}
+body{
+    background-image: url();
+    background-repeat: no-repeat;
+}
+
     </style>
 </head>
-<%-include("./includes/navbar.ejs")%>
+
 <body>
-    <h1 id="heading">Latest</h1>
+    <%-include("./includes/navbar") %>
+    <h1 id="heading">Latest Products:</h1>
     <%-include("./includes/swiper.ejs")%>
     <hr>
-    <h2>sup</h2>
+    <h2 id="heading">Browse By Category:</h2>
+    <br>
+    <%-include("./includes/productCard.ejs")%>
+    <br>
+    <h2 id="heading">Browse By Brands:</h2>
+    <br>
+    <%-include("./includes/brandCard.ejs")%>
+    <br>
+    <%- include("./includes/audioXIntro.ejs") %>
+
+
     
 </body>
 

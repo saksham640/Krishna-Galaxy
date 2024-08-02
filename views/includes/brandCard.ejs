@@ -1,0 +1,54 @@
+<head>
+    <style>
+        #card{
+            border: 1px solid rgb(179, 179, 179);
+            margin: 1rem;
+            border-radius: 1rem;
+            display: inline-block;
+        }
+        .card-img-top{
+            background-color: rgba(255, 0, 0, 0.285);
+            border: 1px solid transparent;
+            border-radius: 1rem;
+            background-image: url("https://wallpapers.com/images/hd/simple-white-polygons-knvwytp7clyae2wy.jpg") !important;
+        }
+        #heading{
+            margin-top: 0% !important;
+            padding-top: 0% !important;
+        }
+        .card-text{
+            text-decoration: none !important;
+            color: black;
+        }
+        #viewmore{
+          width: 6rem !important;
+          font-weight: 500;
+          margin-right: 25%;
+          height: 3rem;
+        }
+    </style>
+</head>
+
+<%for(let i = 0; i<= 3; i++){%>
+<a href= "/<%=allBrands[i].name%>">
+<div id="card" style="width: 16rem;">
+    <img src="<%= allBrands[i].mainimage%>" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="heading"><%=allBrands[i].name%></h5>
+      <p class="card-text"><%=allBrands[i].description%></p>
+    </div>
+  </div>
+  </a>
+  <%}%>
+  <a href= "/allBrands">
+    <div id="card" style="width: 16rem;">
+        <img src="https://i.ibb.co/ts1frn8/DJ-Equipment-Guide.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="heading">View All Brands</h5>
+          <button class="btn btn-primary" id="viewmore">View All</button>
+        </div>
+      </div>
+      </a>
+
+  
+
