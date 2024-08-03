@@ -16,16 +16,18 @@
     font-weight: 500;
     font-size: 2rem;
     font-family:score;
+
 }
 
 #heading2{
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0);
-    color: #ffffff;
+    color:rgb(225, 59, 59);
     border-radius: 1rem;
     font-weight: 500;
     font-size: 2rem;
     font-family:score;
+    padding-bottom: 1.5%;
 }
 body{
     background-repeat: no-repeat;
