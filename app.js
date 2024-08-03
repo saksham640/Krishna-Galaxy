@@ -107,7 +107,6 @@ app.post("/owner/addProduct",async(req,res)=>{
         brand: targetBrand._id,
     });
 
-
     await newProduct.save(); 
 
     await targetBrand.products.push(newProduct._id);

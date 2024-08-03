@@ -9,16 +9,25 @@
 }
         
         #heading{
-    margin-top: 0.9rem !important;
     text-align: center;
-    border: 0px solid black;
-    border-radius: .7rem;
+    border: 1px solid rgba(0, 0, 0, 0);
     color: #000000;
+    border-radius: 1rem;
     font-weight: 500;
     font-size: 2rem;
     font-family:score;
+}
 
+#heading2{
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: #ffffff;
+    border-radius: 1rem;
+    font-weight: 500;
+    font-size: 2rem;
+    font-family:score;
 }
 body{
     background-repeat: no-repeat;
+    background-color: gainsboro !important;
 }

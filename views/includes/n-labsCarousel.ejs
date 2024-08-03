@@ -1,0 +1,29 @@
+
+<head>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/styles/homeCarousel.css">
+</head>
+
+<div id="swapbox2">
+<section class="collection2">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+        <%for(let i = 0; i<= 5; i++){%>
+  <div class="content2 swiper-slide">
+    <img src="<%=allBrands[3].products[i].mainimage%>" alt="Smoke-machine">
+  </div>
+  <%}%>
+
+  </div>
+  </div>
+</section>
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/javaScript/n-labsCarousel.js"></script>
+</body>
+
+</html>

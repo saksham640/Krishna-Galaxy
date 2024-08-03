@@ -1,23 +1,17 @@
-<%-include("./includes/navbar")%>
-    <br>
+
     <head>
-        <style>
-            .form-container {
-        max-width: 60%;
-        margin: auto;
-    }
-    @media (max-width: 600px) {
-    .form-container {
-    max-width: 85%;
-    margin-left: 5% !important;
-    padding-left: 5% !important;
-    }
-    
-    }
-        </style>
+        <link rel="stylesheet" href="/styles/addProduct.css">
+        <link rel="stylesheet" href="/styles/navbar.css">
+        <link rel="stylesheet" href="styles/home.css">
         <script async src="https://imgbb.com/upload.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
+        <%-include("./includes/navbar")%>
         <div class="container form-container mt-5">
             <form novalidate class="row g-3" method="POST" action="/owner/addProduct">
                 <div class="col-md-6">

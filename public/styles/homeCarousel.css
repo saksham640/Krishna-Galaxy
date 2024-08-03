@@ -5,17 +5,41 @@
     box-sizing: border-box;
 }
 #swapbox{
-  background-image: url("https://www.shutterstock.com/image-vector/modern-vector-background-black-wavy-260nw-2380711627.jpg");
-  background-size: auto;
+  background-image: url(/white-polygon-abstract-4k-gf.jpg);
+  height: 33rem !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 2%;
+
+}
+#swapbox2{
+    width: 100%;
+  }
+.collection2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+
 }
 .collection{
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+.collection2 .content2{
+    height: 20rem; 
+    width: 20rem;  
+    background-color: #ffffff;
+    border: 0px solid rgba(255, 255, 255, 0);
+    border-radius: 1rem;
+    overflow: hidden;
+    /* padding: .2rem; */
 }
 .collection .content{
-    height: 28rem; 
-    width: 25rem;  
+    height: 25rem; 
+    width: 28rem;  
     background-color: #ffffff;
     border: 0px solid rgba(255, 255, 255, 0);
     border-radius: 1rem;
@@ -28,6 +52,13 @@
     border-bottom-left-radius: .6rem;
     border-bottom-right-radius: .6rem;
 }
+
+.content2 img{
+    width: 100%;
+    border-bottom-left-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+}
+
 .text-content{
     display: flex;
     justify-content: center;
