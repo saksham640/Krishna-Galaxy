@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=targetProduct.name%></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+    /* *{
+        border: 1px solid black;
+    } */
+
+.body2{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.brand-menu {
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.brandimage {
+    padding: 5px;
+    margin-bottom: 3px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.heading {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+.product-container {
+    display: grid;
+    gap: 5px;
+    width: 100%;
+}
+.product {
+    padding: 5px;
+    text-align: center;
+}
+.product img {
+    width: 57%;
+    height: auto;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+}
+#brandimage {
+    max-width: 50%;
+    background-color: transparent;
+}
+.main-content {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px;
+    background-image: url(https://i0.wp.com/www.frebers.com/wp-content/uploads/2020/08/Black-Abstract-Background-Free-Vector-Art-01-scaled.jpg?fit=2560%2C1440&ssl=1);
+    background-position-x: -100px;
+}
+.main-content h1 {
+    padding: 5px;
+}
+.main-content img {
+    max-width: 75%;
+    height: auto;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+}
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 65%;
+}
+.mainbox {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 4%;
+}
+.thumbnailBox {
+    width: 70%;
+    margin-left: 7.85%;
+    margin-top: 1%;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.thumbnails {
+    width: 20%;
+    text-align: center;
+}
+.thumbnails img {
+    width: 100%;
+    height: auto;
+}
+.infobox {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+.description {
+    padding: 10px;
+    text-align: center;
+}
+.specsbox {
+    text-align: center;
+    padding: 10px;
+    width: 25rem;
+}
+.specsbox ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.specsbox li {
+    padding: 5px 0;
+}
+.more{
+    font-family: score;
+    color: white;
+}
+#home1{
+    font-family: score;
+    color: white;
+    margin: auto;
+    font-size: 200%;
+}
+.bg-color-black{
+    background-color: black;
+}
+.description{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+li{
+    color: white;
+}
+ul{
+    color: white;
+}
+.cart{
+    width: 15rem;
+    margin-top: 8%;
+    margin-left: 15%;
+}
+#home{
+    width: 100%;
+    height: auto;
+    margin-left: 3%;
+    border-radius: 2rem;
+    background-color: rgb(255, 56, 56);
+    font-weight: 300;
+}
+button {
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* General styles for image hover effect */
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+.deletebtn{
+    width: 10%;
+}
+.deleteform{
+    margin-top: 25%;
+    margin-right: auto;
+}
+
+    </style>
+</head>
+<body>
+    
+    <%-include("./includes/navbar.ejs")%>
+    <div class="body2">
+    <div class="brand-menu bg-color-black">
+        <div class="brandimage">
+            <a href="/brands/<%=targetBrand.name%>"><img src="<%=targetProduct.brand.mainimage%>" id="brandimage" alt="Brand Image"></a>
+        </div>
+        <div class="heading">
+            <h3 class="more bg-color-black" id="yeee">More From <%=targetBrand.name%></h3>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <a href="/products/<%=targetBrand.products[0]._id%>">
+                    <img src="<%=targetBrand.products[0].mainimage%>" alt="Product 1">
+                </a>
+            </div>
+            <div class="product">
+                <a href="/products/<%=targetBrand.products[1]._id%>">
+                    <img src="<%=targetBrand.products[1].mainimage%>" alt="Product 2">
+                </a>
+            </div>
+            <div class="product">
+                <a href="/products/<%=targetBrand.products[2]._id%>">
+                    <img src="<%=targetBrand.products[2].mainimage%>" alt="Product 3">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="main-container">
+            <div class="mainbox">
+                <h1 class="more"><%=targetProduct.brand.name%> <%=targetProduct.name%></h1>
+                <img src="<%=targetProduct.mainimage%>" class="mainImage">
+            </div>
+            <div class="infobox">
+                <div class="description">
+                    <h2 class="more">Description</h2>
+                    <h5 class="description"><i><%=targetProduct.description%></i></h5>
+                </div>
+                <div class="specsbox">
+                    <h2 class="more">Specifications: </h2>
+                    <br>
+                    <h4 class="specsinfo">
+                        <ul>
+                        <%for(let i = 0; i<=targetProduct.specifications.length-1; i++){%>
+                       <li> <h4 class="more"><%=targetProduct.specifications[i]%></h4></li>
+                        <%}%>
+                        </ul>
+                    </h4>
+                </div>
+                <div class="cart">
+                    <img src="/vecteezy_add-to-cart-icon-add-to-card-button-on-transparent-background_19787040.png">
+                </div>
+                
+               <a href="/"><button class="btn btn-primary" id="home" type="submit"><h6 id="home1">Home</h6></button></a>
+            </div>
+        </div>
+        <div class="thumbnailBox">
+            <div class="thumbnails">
+                <img src="<%=targetProduct.mainimage%>" alt="Thumbnail 1" class="thumbnailImg">
+            </div>
+            <div class="thumbnails">
+                <img src="<%=targetProduct.images[0]%>" alt="Thumbnail 2" class="thumbnailImg">
+            </div>
+            <div class="thumbnails">
+                <img src="<%=targetProduct.images[1]%>" alt="Thumbnail 3" class="thumbnailImg">
+            </div>
+            <div class="thumbnails">
+                <img src="<%=targetProduct.images[2]%>" alt="Thumbnail 4" class="thumbnailImg">
+            </div>
+            <form action="/products/<%=targetProduct._id%>/delete" class="deleteform" method="POST">
+                <input type="password" name="pass">
+            <button> Delete </button>
+            </form>
+            <form action="/products/<%=targetProduct._id%>/update" class="deleteform" method="POST">
+                <input type="password" name="pass">
+                <input type="checkbox" name="check">
+            <button> Update </button>
+            </form>
+        </div>
+    </div>
+    
+    </body2>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    let mainImage = document.querySelector(".mainImage");
+    let thumbnails = document.querySelectorAll(".thumbnailImg");
+    let bgimg = document.querySelector("#brandimage");
+    let brandname = document.querySelector("#yeee");
+
+    let targetImg;
+
+    for(let i = 0; i<= 3; i++){
+        thumbnails[i].addEventListener("click",()=>{
+            targetImg = thumbnails[i].src;
+            console.log(targetImg);
+            mainImage.src = targetImg;
+        });
+    }
+
+    let specsheet = document.querySelector(".specsinfo");
+
+    function replaceNewlines(inputString) {
+    return inputString.replace(/\r\n/g, '\n');
+}
+    specsheet.innerHTML = replaceNewlines(specsheet.innerHTML);
+    console.log(specsheet.innerHTML);
+
+    if(brandname.innerHTML == "More From Zenith"){
+        bgimg.style.backgroundColor = "white";
+        bgimg.style.border = "1px solid white";
+        bgimg.style.borderRadius = "1rem";
+
+    }
+  </script>
+</body>
+</html>

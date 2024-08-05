@@ -16,7 +16,7 @@ let productSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "brand",
     },
-    specifications: String,
+    specifications: [String],
 
 });
 

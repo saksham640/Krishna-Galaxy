@@ -12,7 +12,9 @@
 
         <%for(let i = 0; i<= 5; i++){%>
   <div class="content2 swiper-slide">
-    <img src="<%=allBrands[3].products[i].mainimage%>" alt="Smoke-machine">
+    <a href="/products/<%=allBrands[2].products[i]._id%>">
+    <img src="<%=allBrands[2].products[i].mainimage%>" alt="Smoke-machine">
+    </a>
   </div>
   <%}%>
 

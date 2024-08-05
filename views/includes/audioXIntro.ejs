@@ -3,7 +3,7 @@
 </head>
 <body>
     <div id="container">
-        <div id="logobox"><img src="https://i.ibb.co/r3Wnm5D/audio-X-trans.png" id="audioximg"></div>
+        <div id="logobox"><a href="/brands/AudioX"><img src="https://i.ibb.co/r3Wnm5D/audio-X-trans.png" id="audioximg"></a></div>
         <h4 id="text"><i>Welcome to AudioX, premium range of carefully crafted speaker drivers made for performance</i></h4>
     </div>
     <div id="canvas">
@@ -19,9 +19,9 @@
             <div id="cards">
                 <% for(let i = 0; i < 8; i++) { %>
                 <div class="card">
-                    <img src="<%=allBrands[2].products[i % 4].mainimage%>" class="card-img-top" alt="...">
+                    <a href="/products/<%=allBrands[1].products[i % 4]._id%>"><img src="<%=allBrands[1].products[i % 4].mainimage%>" class="card-img-top" alt="..."></a>
                     <div class="card-body">
-                      <h4 class="card-title" id="cardtxt"><%=allBrands[2].products[i % 4].name%></h4>
+                      <h4 class="card-title" id="cardtxt"><%=allBrands[1].products[i % 4].name%></h4>
                     </div>
                 </div>
                 <% } %>
@@ -29,5 +29,6 @@
         </div>
     </div>
     <script src="/javaScript/audioXCarousel.js"></script>
-</body>
+</body> 
 </html>
+

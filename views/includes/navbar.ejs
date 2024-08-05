@@ -1,11 +1,244 @@
 
 <head>
   <link rel="stylesheet" href="styles/navbar.css">
+  <style>
+    
+    @media screen and (min-width: 1024px) {
+      .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .navbar{
+      height: 5rem;
+      color: white;
+      background-color: rgb(0, 0, 0) !important;
+    }
+    .brandname{
+      align-content: center;
+      padding-right: 3%;
+      color: rgb(255, 82, 82);
+      font-size: 2.3rem;
+      line-height: 100%;
+      text-align: center;
+      font-family: score;
+      letter-spacing: 2px;
+      
+    }
+
+
+    .nav-link {
+  font-size: 1.2rem;
+  padding-bottom: 13%;
+  color: rgb(255, 255, 255) !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: rgb(255, 255, 255);
+  transition: width 0.3s ease, right 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 60%;
+  right: 0;
+}
+
+.fa-shopping-cart {
+  color: rgb(243, 123, 79) !important;
+  margin-right: 0.9rem;
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  transition: transform 0.2s ease;
+}
+
+.fa-shopping-cart:hover {
+  transform: scale(1.2);
+}
+
+/* Add this CSS to your existing styles */
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-primary{
+  background-color: red;
+  height: 4rem;
+  width: 4rem;
+  text-align:center !important;
+
+}
+#viewmore{
+  margin-left: 30% !important;
+}
+.logo{
+  padding: 0;
+  margin: 0;
+}
+    }
+    @font-face {
+    font-family: score;
+    src: url(/fonts/Helvetica-Neue-97-Black-Condensed.ttf);
+}
+
+    @font-face {
+    font-family: cabrion;
+    src: url(/fonts/Cabrion-Bold.ttf);
+}
+
+@media screen and (max-width: 900px) {
+  *{
+    margin: 0% !important;
+    padding: 0% !important;
+  }
+
+  .logo{
+    margin: 0% !important;
+    padding: 0% !important;
+  }
+
+  .brandname{
+      color: rgb(255, 82, 82);
+      font-size:1.3rem;
+      line-height: 100%;
+      text-align: center;
+      letter-spacing: 2px;
+      font-family: sans-serif;
+      font-weight: 650;
+      margin-right: 5.6% !important;
+    }
+
+    .navbar-toggler{
+
+      margin-right: 3% !important;
+
+    }
+
+
+    .brand{
+      padding-top: 2% !important;
+    }
+    .nav-link {
+  display:block !important;
+  font-size: 1.4rem;
+  padding-bottom: 13%;
+  color: rgb(255, 255, 255) !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  display: inline-block;
+  padding-left: 2% !important;
+  padding-bottom: 3.5% !important;
+  background-color: rgb(51, 51, 51) !important;
+  transition: 0.2s ease !important;
+}
+
+.nav-link:active{
+  background-color: rgb(255, 86, 86) !important;
+}
+.nav-link:active::after{
+  background-color: rgb(255, 181, 90) !important;
+}
+.dropdown-item{
+  display: inline !important;
+  max-width: 22%;
+}
+
+#audiox{
+  max-width: 30%;
+}
+
+.btn-primary{
+  background-color: red;
+  height: 4rem;
+  width: 4rem;
+  margin: 0.6rem !important;
+  text-align:center !important;
+}
+.category{
+  max-width: 24% !important;
+}
+.searchbar{
+  max-width: 60%;
+  align-items: center !important;
+  justify-content: center !important;
+  align-content: center !important;
+  margin-right: 4% !important;
+  margin-left: 6% !important; 
+  margin-top: 4% !important;
+  text-align: center !important;
+}
+
+.my-sm-0{
+  margin-top: 6% !important;
+  color: white;
+  background-color: black;
+  border-color: rgb(0, 0, 0);
+  padding: 5px !important;
+}
+.fa-shopping-cart {
+  color: rgb(243, 123, 79) !important;
+  font-size: 1.6rem;
+  margin-left: 2rem !important;
+  margin-right: 0% !important;
+  margin-top: 4% !important;
+
+
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: rgb(255, 255, 255);
+  transition: width 0.28s ease, right 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  right: 0;
+}
+
+.fa-list{
+  color: white;
+  font-size: 1.7rem;
+}
+
+}
+    
+    
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark sticky-top">
     <a class="navbar-brand logo" href="#">
-      <img src= "https://i.ibb.co/YXgXmj1/3h48ksu1-fotor-bg-remover-2024073012935.png" width="87" height="70" class="d-inline-block align-top logo" alt="brand">
+    <a href="/"><img src= "https://i.ibb.co/YXgXmj1/3h48ksu1-fotor-bg-remover-2024073012935.png" width="87" height="70" class="d-inline-block align-top logo" alt="brand"></a>
     </a>
     <h4 class="brandname"><b>KRISHNA GALAXY</b></h4>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,10 +251,9 @@
            Brands
           </a>
           <div class="dropdown-menu" aria-labelledby="brandsDropdown">
-            <img src="https://i.ibb.co/K5QXLWS/Jia-Lighting-modified.png" alt="Jia-Lighting-modified" class="dropdown-item" href="#">
-            <img src="https://i.ibb.co/ZcQwH2M/nlabs-logo.png" alt="nlabs-logo" class="dropdown-item" href="#">
-            <img src="https://i.ibb.co/hsY7wWB/zenith.png" alt="zenith" class="dropdown-item" href="#">
-            <span id="viewmore"><button class="btn btn-primary">View<br> More</button></span>
+            <a href="/brands/AudioX"><img src= "https://i.ibb.co/r3Wnm5D/audio-X-trans.png alt=Jia-Lighting-modified" class="dropdown-item" href="/"></a>
+            <a href="/brands/N-LABS"><img src="https://i.ibb.co/ZcQwH2M/nlabs-logo.png" alt="nlabs-logo" class="dropdown-item" ></a>
+            <a href="/brands/Zenith"><img src="https://i.ibb.co/hsY7wWB/zenith.png" alt="zenith" class="dropdown-item" ></a>
             
           </div>
         </li>
@@ -30,9 +262,9 @@
             Categories
           </a>
           <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
-            <img src="https://i.ibb.co/G5bDvXQ/speaker-menu-cat.jpg" alt="speaker-menu-cat" class="dropdown-item category" href = "#">
-            <img src="https://i.ibb.co/tqvYMff/lighting-menu-cat.jpg" alt="lighting-menu-cat" class="dropdown-item category" href = "#">
-            <img src="https://i.ibb.co/Z2fsZ0b/amp-menu-cat.jpg" alt="amp-menu-cat" class="dropdown-item category" href = "#">;
+            <a href = "/categories/Speakers"><img src="https://i.ibb.co/G5bDvXQ/speaker-menu-cat.jpg" alt="speaker-menu-cat" class="dropdown-item category" ></a>
+            <a href = "/brands/Zenith"><img src="https://i.ibb.co/tqvYMff/lighting-menu-cat.jpg" alt="lighting-menu-cat" class="dropdown-item category" href = "/brands/Zenith"></a>
+            <a href = "/categories/Amplifiers"><img src="https://i.ibb.co/Z2fsZ0b/amp-menu-cat.jpg" alt="amp-menu-cat" class="dropdown-item category" href = "/categories/Amplifiers"></a>
             <span id="viewmore"><button class="btn btn-primary">View<br> More</button></span>
           </div>
         </li>
@@ -43,7 +275,6 @@
           <div class="dropdown-menu" aria-labelledby="allProductsDropdown">
             <a class="dropdown-item" href="#">something</a>
             <a class="dropdown-item" href="#">kuch bhi</a>
-            <a class="dropdown-item" href="#">savita bhabi</a>
           </div>
         </li>
         <li class="nav-item dropdown">

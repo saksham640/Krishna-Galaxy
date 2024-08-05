@@ -1,9 +1,9 @@
 <head>
     <link rel="stylesheet" href="/styles/productCard.css">
 </head>
-<%for(let i = 0; i <= 3; i++){%>
+<%for(let i = 0; i <= 2; i++){%>
 <div id="card" style="width: 16rem;">
-    <img src= "<%=allCategories[i].mainimage%>" class="card-img-top" alt="...">
+  <a href="categories/<%=allCategories[i].name%>"> <img src= "<%=allCategories[i].mainimage%>" class="card-img-top" alt="..."></a>
     <div class="card-body">
       <h5 class="card-title" id="heading"><%=allCategories[i].name%></h5>
       <p class="card-text"><%=allCategories[i].description%></p>

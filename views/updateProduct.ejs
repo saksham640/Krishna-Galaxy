@@ -17,35 +17,37 @@
 <body>
     <%-include("./includes/navbar")%>
     <div class="container form-container mt-5">
-        <form novalidate class="row g-3" method="POST" action="/owner/addProduct">
+        <form novalidate class="row g-3" method="POST" action="/products/<%=targetProduct._id%>/update/success">
             <div class="col-md-6">
                 <label for="inputTitle" class="form-label">Name of product</label>
-                <input type="text" required class="form-control needs-validation" id="inputTitle" name="name" placeholder="Name of your Listing">
+                <input type="text" required class="form-control needs-validation" id="inputTitle" name="name" placeholder="Name of your Listing" value="<%=targetProduct.name%>">
             </div>
             <div class="col-12">
                 <label for="inputDescription" class="form-label">Description</label>
-                <textarea class="form-control" id="inputDescription" name="description" placeholder="Describe your product" rows="5" cols="10"></textarea>
+                <textarea class="form-control" id="inputDescription" name="description" placeholder="Describe your product" rows="5" cols="10"><%=targetProduct.description%></textarea>
             </div>
             <div class="col-md-6 mt-4">
                 <label for="inputBrand" class="form-label">Brand</label>
                 <select id="inputBrand" class="form-select dropend" name="brand">
-                <%-include("./includes/brands.ejs")%>
+                    <option selected><%=targetProduct.brand.name%></option>
+                    <%-include("./includes/brands.ejs")%>
                 </select>
             </div>
             <div class="col-md-4 mt-4">
                 <label for="inputCountry" class="form-label">Category</label>
                 <select id="inputCountry" class="form-select dropend" name="category">
+                <option selected><%=targetProduct.category.name%></option>
                 <%-include("./includes/cats.ejs")%>
                 </select>
             </div>
             <div class="col-md-2">
                 <label for="inputPrice" class="form-label">Price</label>
-                <input type="number" class="form-control" id="inputPrice" name="price" placeholder="in rupees">
+                <input type="number" class="form-control" id="inputPrice" name="price" placeholder="in rupees" value="<%=targetProduct.price%>">
             </div>
             <div class="col-12">
                 <div class="form-check">
                     <label for="inputDescription" class="form-label">Specifications</label>
-                    <textarea class="form-control" id="inputDescription" name="specifications" placeholder="Describe your Place" rows="5" cols="10"></textarea>
+                    <textarea class="form-control" id="inputDescription" name="specifications" placeholder="Describe your Place" rows="5" cols="10"><%=targetProduct.specifications%></textarea>
                     <br>
                 </div>
             </div>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=targetCategory.name%></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .body2 {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+        }
+        .brand-menu {
+            width: 20%;
+            height: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .brandimage {
+            padding: 5px;
+            margin-bottom: 3px;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
+        .heading {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+        .product-container {
+            display: grid;
+            gap: 5px;
+            width: 100%;
+        }
+        .product {
+            padding: 5px;
+            text-align: center;
+        }
+        .product img {
+            width: 57%;
+            height: auto;
+            border: 1px solid transparent;
+            border-radius: 1rem;
+        }
+        #brandimage {
+            max-width: 50%;
+            background-color: transparent;
+        }
+        .main-content {
+            width: 80%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            padding: 10px;
+            background-image: url(https://i0.wp.com/www.frebers.com/wp-content/uploads/2020/08/Black-Abstract-Background-Free-Vector-Art-01-scaled.jpg?fit=2560%2C1440&ssl=1);
+            background-position-x: -100px;
+        }
+        .main-content h1 {
+            padding: 5px;
+        }
+        .main-content img {
+            max-width: 75%;
+            height: auto;
+            border: 1px solid transparent;
+            border-radius: 1rem;
+        }
+        .main-container {
+            display: flex;
+            width: 100%;
+            height: 65%;
+        }
+        .mainbox {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 4%;
+        }
+        .thumbnailBox {
+            width: 70%;
+            margin-left: 7.85%;
+            margin-top: 1%;
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .thumbnails {
+            width: 20%;
+            text-align: center;
+        }
+        .thumbnails img {
+            width: 100%;
+            height: auto;
+        }
+        .infobox {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 2%;
+            margin-top: 5%;
+        }
+        .description {
+            padding: 10px;
+            text-align: center;
+        }
+        .specsbox {
+            text-align: center;
+            padding: 10px;
+            width: 25rem;
+        }
+        .specsbox ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .specsbox li {
+            padding: 5px 0;
+        }
+        .more {
+            font-family: score;
+            color: white;
+        }
+        #home1 {
+            font-family: score;
+            color: white;
+            margin: auto;
+            font-size: 200%;
+        }
+        .bg-color-black {
+            background-color: black;
+        }
+        .description {
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+        }
+        li {
+            color: white;
+        }
+        ul {
+            color: white;
+        }
+        .cart {
+            width: 15rem;
+            margin-top: 8%;
+            margin-left: 15%;
+        }
+        #home {
+            width: 100%;
+            height: auto;
+            margin-left: 3%;
+            border-radius: 2rem;
+            background-color: rgb(255, 56, 56);
+            font-weight: 300;
+        }
+        button {
+            transition: transform 0.3s ease;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        img {
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.08);
+        }
+        .deletebtn {
+            width: 10%;
+        }
+        .deleteform {
+            margin-top: 25%;
+            margin-right: auto;
+        }
+        #cardtxt {
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+            text-align: center;
+        }
+        #card {
+            width: 16rem;
+            transition: transform 0.3s ease;
+            border: 1px solid rgb(231, 231, 231);
+            margin: 0.5rem;
+            border-radius: 1rem;
+            display: inline-block;
+            text-align: center;
+            align-self: center;
+            align-items: center;
+            align-content: center;
+            background-color: rgb(231, 231, 231)
+        }
+        #card:hover {
+            transform: scale(0.97);
+        }
+        .card-img-top {
+            background-color: rgba(255, 0, 0, 0.285);
+            border: 1px solid transparent;
+            border-radius: 1rem;
+            background-image: url("https://wallpapers.com/images/hd/simple-white-polygons-knvwytp7clyae2wy.jpg") !important;
+        }
+        .card-text {
+            color: rgb(0, 0, 0);
+        }
+        .card-title {
+            color: rgb(0, 0, 0);
+            font-family: score;
+        }
+        #cards {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20%;
+        }
+        .card {
+            flex: 0 0 20%;
+            margin-left: 0.5rem !important;
+            border: 1px solid transparent;
+            border-radius: 1rem;
+            width: 13rem !important;
+            height: 9rem !important;
+        }
+        .canvas2 {
+            background-image: url("https://th.bing.com/th/id/R.070c371143831dc8a1e881fe3958633a?rik=YQE%2fv7Z%2fF5YmhA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f05%2fBlack-Backgrounds-Photos-Download.jpg&ehk=bCFkgAO7iA%2f5yAkBTyiM8v01ivdKHfC3S%2bFFYQK4NzM%3d&risl=&pid=ImgRaw&r=0");
+            padding: 20px;
+            text-align: center;
+            height: 100;
+        }
+        .canvas2 h1 {
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <%- include("./includes/navbar.ejs") %>
+    <div class="body2">
+        <div class="brand-menu bg-color-black">
+            <div class="brandimage">
+                <a href="/brands/<%=targetCategory.name%>"><img src="<%=targetCategory.mainimage%>" id="brandimage" alt="Brand Image"></a>
+            </div>
+            <div class="heading">
+                <h3 class="more bg-color-black" id="yeee">More From <%=targetCategory.name%></h3>
+            </div>
+            <div class="product-container">
+                <div class="product">
+                    <a href="/products/<%=targetCategory.products[0]._id%>">
+                        <img src="<%=targetCategory.products[0].mainimage%>" alt="Product 1">
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="/products/<%=targetCategory.products[1]._id%>">
+                        <img src="<%=targetCategory.products[1].mainimage%>" alt="Product 2">
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="/products/<%=targetCategory.products[2]._id%>">
+                        <img src="<%=targetCategory.products[2].mainimage%>" alt="Product 3">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;" class="canvas2">
+            <h1>ALL <%=targetCategory.name%></h1>
+            <% for(let i = 0; i <= targetCategory.products.length - 1; i++) { %>
+                <div id="card" style="width: 16rem;">
+                    <a href="/products/<%= targetCategory.products[i]._id %>">
+                        <img src="<%= targetCategory.products[i].mainimage %>" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <a href="/products/<%= targetCategory.products[i]._id %>"><h3 class="card-title" id="heading"><%= targetCategory.products[i].name %></h3></a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

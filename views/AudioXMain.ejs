@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=AudioX.name%></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+        #container {
+            border: 1px solid black;
+            width: 100% !important;
+            height: 12rem;
+            justify-content: center;
+            background-color: black;
+        }
+        #audioximg {
+            width: 23%;
+            height: 70%;
+            margin-top: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        #canvas {
+            width: 100%;
+            height: 36rem;
+            background-color: rgb(66, 66, 66);
+            background-image: url("https://i.ibb.co/dmWts0N/audiox-bg.jpg");
+            background-size: 93%;
+            display: flex;
+            align-items: center;
+            background-position-x: -300px;
+        }
+        #canvas2 {
+            width: 100%;
+            height: 150rem;
+            background-color: rgb(0, 0, 0);
+            background-image: url("https://th.bing.com/th/id/R.070c371143831dc8a1e881fe3958633a?rik=YQE%2fv7Z%2fF5YmhA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f05%2fBlack-Backgrounds-Photos-Download.jpg&ehk=bCFkgAO7iA%2f5yAkBTyiM8v01ivdKHfC3S%2bFFYQK4NzM%3d&risl=&pid=ImgRaw&r=0");
+            background-size: 93%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-size: 115%;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        #canvas2-heading {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 200;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        #text {
+            color: white;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 200;
+        }
+        #logobox {
+            margin: auto;
+        }
+        #adj {
+            height: 80%;
+            width: 25%;
+            border: 1px solid white;
+            display: inline-block;
+        }
+        #showytxt {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 500;
+            color: white;
+            font-size: 4rem;
+            text-shadow: 0 0 2px rgba(255, 3, 3, 0), 0 0 20px rgba(255, 255, 255, 0), 0 0 40px rgba(255, 255, 255, 0.623), 0 0 60px rgba(255, 180, 180, 0.623);
+        }
+        #showytxt2 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 500;
+            color: white;
+            font-size: 4rem;
+            text-shadow: 0 0 2px rgba(255, 3, 3, 0), 0 0 20px rgba(255, 255, 255, 0), 0 0 40px rgba(255, 255, 255, 0.623), 0 0 60px rgba(255, 180, 180, 0.623);
+            text-align: center;
+        }
+        #showytxtbox {
+            padding-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 11%;
+        }
+        #showytxtbox2 {
+            padding-left: 1rem;
+            display: flex;
+            flex-direction: row;
+        }
+        #carousel {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        #cards {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            margin-bottom: 26%;
+        }
+        .card {
+            flex: 0 0 22%; /* Show 4 cards at a time */
+            margin-left: 1rem !important;
+            border: 1px solid transparent;
+            border-radius: 1rem;
+            width: 15rem; /* Adjusted width */
+            height: 10rem; /* Adjusted height */
+        }
+        #go {
+            height: 2.5rem;
+            text-align: center;
+        }
+        #cardtxt {
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            text-align: center;
+        }
+        #card {
+            width: 16rem;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(179, 179, 179, 0);
+            margin: 1rem;
+            border-radius: 1rem;
+            display: inline-block;
+            text-align: center;
+            align-self: center;
+            align-items: center;
+            align-content: center;
+        }
+        #card:hover {
+            transform: scale(1.10);
+        }
+        .card-img-top {
+            background-color: rgba(255, 0, 0, 0.285);
+            border: 1px solid transparent;
+            border-radius: 1rem;
+            background-image: url("https://wallpapers.com/images/hd/simple-white-polygons-knvwytp7clyae2wy.jpg") !important;
+        }
+        .card-text {
+            color: white;
+        }
+        .card-title {
+            color: white;
+        }
+        #canvas2-heading{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 500;
+            color: white;
+            font-size: 4rem;
+            text-shadow: 0 0 2px rgba(255, 3, 3, 0), 0 0 20px rgba(255, 255, 255, 0), 0 0 40px rgba(255, 255, 255, 0.623), 0 0 60px rgba(255, 180, 180, 0.623);
+        }
+  </style>
+</head>
+<body>
+    <%- include("./includes/navbar") %>
+    <div id="container">
+        <div id="logobox"><img src="https://i.ibb.co/r3Wnm5D/audio-X-trans.png" id="audioximg"></div>
+        <h4 id="text"><i>Welcome to AudioX, premium range of carefully crafted speaker drivers made for performance</i></h4>
+    </div>
+    <div id="canvas">
+        <span id="showytxtbox">
+           <h1 id="showytxt">HOTTEST</h1>
+           <br>
+           <h1 id="showytxt">SELLING</h1>
+           <br>
+           <h1 id="showytxt">SPEAKERS</h1>
+           <br>
+        </span>
+        <div id="carousel">
+            <div id="cards">
+                <% for(let i = 0; i < 8; i++) { %>
+                <div class="card">
+                    <a href="/products/<%=AudioX.products[i%4]._id%>"><img src="<%=AudioX.products[i%4].mainimage%>" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                      <h4 class="card-title" id="cardtxt"><%=AudioX.products[i%4].name%></h4>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <div id="canvas2">
+        <h1 id="canvas2-heading">Explore Our Products</h1>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+            <%for(let i = 0; i<=AudioX.products.length-1; i++){%>
+            <div id="card" style="width: 16rem;">
+                <a href="/products/<%=AudioX.products[i]._id%>">
+                    <img src="<%=AudioX.products[i].mainimage%>" class="card-img-top" alt="...">
+                    </a>
+                <div class="card-body">
+                  <h5 class="card-title" id="heading"><%=AudioX.products[i].name%></h5>
+                  <p class="card-text"><%=AudioX.products[i].description%></p>
+                  <a href="/products/<%=AudioX.products[i]._id%>" class="btn btn-primary" id="go">View</a>
+                </div>
+              </div>
+            <%}%>
+        </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
